@@ -1,0 +1,110 @@
+/* App.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.App {
+    width: 800px;
+    height: 600px; /* Ajout d'une hauteur fixe pour permettre le défilement */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Permet le défilement vertical */
+    border-bottom: 1px solid #eeeeee;
+}
+
+.message-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.message-container.bot {
+    justify-content: flex-start;
+}
+
+.message-container.user {
+    justify-content: flex-end;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 70%;
+}
+
+.message.bot {
+    background-color: #e6f7ff;
+    margin-bottom: 6px;
+    border-radius: 20px;
+}
+
+.message.user {
+    background-color: #d9fdd3;
+    margin-left: 200px;
+    margin-bottom: 6px;
+    border-radius: 20px;
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eeeeee;
+    background-color: #fafafa;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-container button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.input-container button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
